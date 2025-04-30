@@ -289,7 +289,7 @@ const cancelAppointment = async (req, res) => {
 
 const appointmentPayment = async (req, res) => {
 
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "https://doctor-appointment-frontend-opal.vercel.app";
   try {
     const { userId, appointmentId } = await req.body;
     const appointment = await AppointmentModel.find({ _id: appointmentId });
