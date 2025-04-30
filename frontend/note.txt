@@ -1,0 +1,70 @@
+ // let today = new Date(); // Wed Jan 22 2025
+    // for (let i = 0; i < 7; i++) {
+    //   // Getting Date With Index
+    //   let currentDate = new Date(today); // Wed Jan 22 2025
+    //   currentDate.setDate(today.getDate() + i); // 22 + 0 = 22 || 22 + 1 = 23 || 22 + 2 = 24
+
+    //   // setting end time for date by index
+    //   let endTime = new Date();
+    //   endTime.setDate(today.getDate() + i);
+    //   endTime.setHours(21, 0, 0, 0); // 9
+
+    //   // Setting Hours
+    //   if (today.getDate() === currentDate.getDate()) { // 22
+    //     currentDate.setHours(currentDate.getHours() > 10 ? currentDate.getHours() + 1 : 10);
+    //     currentDate.setMinutes(currentDate.getMinutes() > 30 ? 30 : 0);
+    //   } else {
+    //     currentDate.setHours(10);
+    //     currentDate.setMinutes(0);
+    //   }
+
+    //   let timeSlots = [];
+
+    //   while (currentDate < endTime) {
+    //     let formattedTime = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    //     timeSlots.push({
+    //       dateTime: new Date(currentDate),  // 22
+    //       time: formattedTime
+    //     });
+
+    //     currentDate.setMinutes(currentDate.getMinutes() + 30);
+
+    //   }
+
+    //   setDocSlots(prev => ([...prev, timeSlots]));
+
+
+    // }
+
+    ////////
+    import { assets } from "../assets/assets";
+
+
+const Navbar = () => {
+  return (
+    <div className="w-full py-5 flex items-center justify-between">
+
+      <div className="flex items-center gap-2">
+        <img src={assets.admin_logo} alt="admin-logo" className="w-40" />
+        <p className="border border-gray-400 rounded-full py-0.5 text-gray-600 px-3 text-sm">Admin</p>
+      </div>
+
+      <button className="block text-white py-1 px-5 text-primary rounded-full">Logout</button>
+    </div>
+  );
+};
+
+export default Navbar;
+/////
+import Navbar from "./components/Navbar";
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 px-[3vw]">
+      <Navbar />
+    </div>
+  );
+};
+
+export default App;
