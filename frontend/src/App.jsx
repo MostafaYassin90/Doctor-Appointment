@@ -11,7 +11,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { ToastContainer, toast } from 'react-toastify';
 import Register from './pages/Auth/Register';
-import Verify from './pages/verify';
+import VerifyPage from './pages/VerifyPage';
 
 const App = () => {
   return (
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/appointment/:docId" element={<Appointment />} />
-        <Route path="/verify" element={<Verify />} />
+        <Route path="/verify" element={<VerifyPage />} />
       </Routes>
       <Footer />
     </div>

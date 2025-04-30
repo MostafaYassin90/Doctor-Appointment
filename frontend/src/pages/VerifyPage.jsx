@@ -1,9 +1,9 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import axios from 'axios';
 import { useContext, useEffect } from "react";
-import { AppContext } from './../context/AppContext';
+import { AppContext } from '../context/AppContext';
 
-const Verify = () => {
+const VerifyPage = () => {
   const { backendUrl, token } = useContext(AppContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const success = searchParams.get("success");
@@ -32,4 +32,4 @@ const Verify = () => {
   );
 };
 
-export default Verify;
+export default VerifyPage;
